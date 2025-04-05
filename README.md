@@ -7,15 +7,25 @@ Irregular Columnar Transposition – një teknikë e transpozimit të shkronjave
 Qëllimi i këtij projekti është të demonstrojë si funksionojnë këto algoritme në praktikë, si pjesë e sigurisë themelore të të dhënave.
 
 
-Udhezimet e Ekzekutimi te Programit:
-1. Klono repository nga GitHub
+Udhëzimet e Ekzekutimi të Programit:
+1. Klonojmë repository nga GitHub
  git clone https://github.com/YllkaFejzullahu/SDH-Projekti2.git
-cd SDH-Projekti2
 
-2. Pasi kemi perdorur Java:
+2. Kalojmë në Folderin e Projektit
+ cd SDH-Projekti2
+
+3. Pasi kemi perdorur Java, ekzekutojmë këto komanda për ta kompiluar dhe ekzekutuar programin::
 javac Main.java
 java Main
 
+4. Verifikimi i Ekzekutimit
+Pasi të ekzekutohet, mund të shohim rezultatin në terminal ose në dritaren e komandave, për të verifikuar që programi ka punuar si duhet.
+
+5. Për të dërguar Ndryshime në GitHub
+Pasi të bëjmë ndonjë ndryshim në kodin tonë dhe dëshirojmë t’i dërgojmë në GitHub, mund të përdorim këto komanda:
+git add .
+git commit -m "Mesazhi i commit-it tonë"
+git push origin main
 
 Algoritmet e Implementuara:
 1. Gronsfeld Cipher
