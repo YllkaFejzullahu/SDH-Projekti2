@@ -52,5 +52,53 @@ public class IrregularColumnarTransposition {
         }
         return result.toString();
     }
+    public String decrypt(String encryptedMessage, String key) {
+        key = key.toUpperCase();
+
+        int columns = key.length();
+        int rows = (int) Math.ceil((double) encryptedMessage.length() / columns);
+
+        // Krijimi i renditjes së kolonave
+        int[] columnOrder = new int[columns];
+        Character[] keyChars = new Character[columns];
+        for (int i = 0; i < columns; i++) {
+            keyChars[i] = key.charAt(i);
+            columnOrder[i] = i;
+        }
+
+        Arrays.sort(keyChars, Comparator.comparingInt(c -> c));
+        for (int i = 0; i < columns; i++) {
+            for (int j = 0; j < columns; j++) {
+                if (key.charAt(j) == keyChars[i]) {
+                    columnOrder[i] = j;
+                    break;
+                }
+            }
+        }
+
+        // Përgatitja e matricës për mbushje kolonë pas kolone
+        char[][] matrix = new char[rows][columns];
+        int index = 0;
+
+        for (int i = 0; i < columns; i++) {
+            int col = columnOrder[i];
+            for (int row = 0; row < rows; row++) {
+                if (index < encryptedMessage.length()) {
+                    matrix[row][col] = encryptedMessage.charAt(index++);
+                }
+            }
+        }
+
+        // Leximi i matricës rresht pas rreshti për të marrë mesazhin origjinal
+        StringBuilder decrypted = new StringBuilder();
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                decrypted.append(matrix[i][j]);
+            }
+        }
+
+        // Hiq X që mund të jenë shtuar në fund si mbushës
+        return decrypted.toString().replaceAll("X+$", "");
+    }
 
 }
