@@ -35,7 +35,6 @@ Thumbs.db
 !/.mvn/wrapper/maven-wrapper.jar
 **/target/
 .gradle/
-build/
 
 # HTTP client requests
 httpRequests/
