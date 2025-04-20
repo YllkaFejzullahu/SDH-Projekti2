@@ -6,3 +6,40 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+# IntelliJ IDEA-specific
+.idea/
+*.iml
+*.iws
+out/
+*.ipr
+
+# Build output
+target/
+build/
+*.class
+
+# Logs
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.swp
+*~
+*.tmp
+
+# Maven / Gradle
+.mvn/
+!/.mvn/wrapper/maven-wrapper.jar
+**/target/
+.gradle/
+build/
+
+# HTTP client requests
+httpRequests/
+
+# IntelliJ database configs
+dataSources/
+dataSources.local.xml
