@@ -5,6 +5,16 @@ public class Main {
     private static final GronsfeldCipher gronsfeldCipher = new GronsfeldCipher();
     private static final IrregularColumnarTransposition columnarTransposition = new IrregularColumnarTransposition();
 
+     private static int getIntInput() {
+        while (true) {
+            try {
+                return Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException ex) {
+                System.out.print("Invalid number. Try again: ");
+            }
+        }
+    }
+
     public static void main(String[] args) {
         while(true){
             System.out.println("\nClassic Cipher Algorithms");
@@ -59,5 +69,32 @@ public class Main {
             System.out.println("Invalid option.");
         }
     }
+ private static void handleColumnarTransposition() {
+        System.out.println("\nIrregular Columnar Transposition");
+        System.out.println("1. Encrypt");
+        System.out.println("2. Decrypt");
+        System.out.print("Select an option (1-2): ");
 
+        int choice = getIntInput();
+        System.out.print("Enter message: ");
+        String message = scanner.nextLine();
+        System.out.print("Enter key (alphabetic): ");
+        String key = scanner.nextLine();
+
+        if (!key.matches("[a-zA-Z]+")) {
+            System.out.println("Error: Key must contain only alphabetic characters.");
+            return;
+        }
+
+        String result;
+        if (choice == 1) {
+            result = columnarTransposition.encrypt(message, key);
+            System.out.println("Encrypted message: " + result);
+        } else if (choice == 2) {
+            result = columnarTransposition.decrypt(message, key);
+            System.out.println("Decrypted message: " + result);
+        } else {
+            System.out.println("Invalid option.");
+        }
+    }
     }
