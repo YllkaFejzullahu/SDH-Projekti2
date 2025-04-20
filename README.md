@@ -49,6 +49,6 @@ Gronsfeld Cipher është një teknikë e thjeshtë kriptimi ku çdo shkronjë zh
 Ky algoritëm e shkruan mesazhin në një tabelë me kolona në bazë të një çelësi (p.sh. 4312). Pastaj kolonat lexohen në një rend të veçantë sipas rendit të çelësit, duke prodhuar një mesazh të koduar.
 
 ### Shembull i Ekzekutimit:
-- **Input**: FSHEHTASIAESHTEART  
-- **Çelësi**: 4312  
-- **Output**: HETRSFEAEHSTASTI
+- **Input**: ARBENAARBENA 
+- **Çelësi**: SIGURIA  
+- **Output**: ABRANBEREAN
