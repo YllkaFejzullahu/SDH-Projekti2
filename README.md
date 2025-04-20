@@ -46,7 +46,7 @@ Gronsfeld Cipher është një teknikë e thjeshtë kriptimi ku çdo shkronjë zh
 - **Output**: PHVBCL
 
 2. **Irregular Columnar Transposition**  
-Ky algoritëm e shkruan mesazhin në një tabelë me kolona në bazë të një çelësi (p.sh. 4312). Pastaj kolonat lexohen në një rend të veçantë sipas rendit të çelësit, duke prodhuar një mesazh të koduar.
+Ky algoritëm e shkruan mesazhin në një tabelë me kolona në bazë të një çelësi (p.sh. SIGURIA). Pastaj kolonat lexohen në një rend të veçantë sipas rendit të çelësit, duke prodhuar një mesazh të koduar.
 
 ### Shembull i Ekzekutimit:
 - **Input**: ARBENAARBENA 
